@@ -11,6 +11,9 @@ import UIKit
 class LoginViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var buttonSuperview: UIView!
+    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var buttonInitialY: CGFloat!
     var buttonOffset: CGFloat!
@@ -35,12 +38,15 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
         // scroll view
         scrollView.delegate = self
         scrollView.contentSize = scrollView.frame.size
-        scrollView.contentInset.bottom = 140
+        print(scrollView.frame.size)
+//        scrollView.contentInset.bottom = 100
         
-        // keyboard
+        
+        
+        // keyboard events
         NotificationCenter.default.addObserver(forName: .UIKeyboardWillShow, object: nil, queue: OperationQueue.main) { (Notification) in
             self.buttonSuperview.frame.origin.y = self.buttonOffset
-            self.scrollView.contentOffset.y = self.scrollView.contentInset.bottom
+            self.scrollView.contentOffset.y = 100
         }
         
         NotificationCenter.default.addObserver(forName: .UIKeyboardWillHide, object: nil, queue: OperationQueue.main) { (Notification) in
@@ -49,6 +55,37 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
         }
     }
 
+    @IBAction func didPressLogin(_ sender: AnyObject) {
+        if emailField.hasText && passwordField.hasText {
+            activityIndicator.startAnimating()
+            
+            delay(2.0, closure: { 
+                if self.emailField!.text == "mikev@gmail.com" && self.passwordField!.text == "12345" {
+                    self.performSegue(withIdentifier: "loginSegue", sender: nil)
+                } else {
+                    self.activityIndicator.stopAnimating()
+                    
+                    let alertController = UIAlertController(title: "Invalid Email or Password", message: "Please enter a valid Email and Password", preferredStyle: .alert)
+                    
+                    let cancelAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+                    
+                    alertController.addAction(cancelAction)
+                    
+                    self.present(alertController, animated: true)
+                }
+            })
+            
+        } else {
+            let alertController = UIAlertController(title: "Email Required", message: "Please enter your email address", preferredStyle: .alert)
+            
+            let cancelAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+            
+            alertController.addAction(cancelAction)
+            
+            present(alertController, animated: true)
+        }
+    }
+    
     @IBAction func didTapOutsideKeyboard(_ sender: AnyObject) {
         view.endEditing(true)
     }

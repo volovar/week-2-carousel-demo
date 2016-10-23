@@ -137,6 +137,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qe3-Rf-GME" userLabel="sign in button">
                                                 <frame key="frameInset" minX="21" minY="18" width="278" height="48"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <connections>
+                                                    <action selector="didPressLogin:" destination="6nc-75-dED" eventType="touchUpInside" id="pSq-Ry-GG9"/>
+                                                </connections>
                                             </button>
                                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" hidesWhenStopped="YES" style="white" id="DNS-wo-a2D">
                                                 <frame key="frameInset" minX="267" minY="33" width="20" height="20"/>
@@ -158,8 +161,12 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="900"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="DNS-wo-a2D" id="8sB-at-fGI"/>
                         <outlet property="buttonSuperview" destination="OJT-kI-i8T" id="Cpf-a9-QZR"/>
+                        <outlet property="emailField" destination="O2O-GX-ICW" id="1DE-LW-K2X"/>
+                        <outlet property="passwordField" destination="383-N3-f81" id="UpZ-dR-oNc"/>
                         <outlet property="scrollView" destination="A7q-Ac-hMd" id="jBC-Km-5j7"/>
+                        <segue destination="dfy-T6-M9n" kind="modal" identifier="loginSegue" id="oAX-zj-Ox9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ArH-Sm-OrZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -170,6 +177,26 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1179.5" y="-263"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="qTc-oi-NBm">
+            <objects>
+                <viewController id="dfy-T6-M9n" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="R1I-hS-46x">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" misplaced="YES" image="welcome1" id="Blu-Hz-M0Y">
+                                <frame key="frameInset" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ggV-MT-Y2C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1665" y="-380"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YfY-cB-iHE">
@@ -201,6 +228,7 @@
         <image name="intro_tile6" width="76" height="75"/>
         <image name="login_form" width="320" height="113"/>
         <image name="sign_in_buttons" width="320" height="104"/>
+        <image name="welcome1" width="320" height="568"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
