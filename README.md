@@ -42,7 +42,7 @@ Time spent: `7 hours`
   - [ ] Tapping on "Terms" shows a web view with the terms.
   - [ ] User is taken to the tutorial screens upon tapping the "Create a Dropbox" button.
 1. Tutorial Screens:
-  - [ ] User can page between the screens with updated dots.
+  - [X] User can page between the screens with updated dots.
   - [ ] Upon reaching the 4th page, the page indicator dots are hidden and "Take Carousel for a Spin" button is shown.
 1. Learn more about Carousel:
   - [ ] Show the "Learn more about Carousel" button in the photo timeline.
