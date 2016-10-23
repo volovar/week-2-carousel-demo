@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES" initialViewController="Al6-6f-nEe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES" initialViewController="2F8-n6-Eqh">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -56,12 +56,11 @@
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="efq-4Q-oNi">
                                         <rect key="frame" x="22" y="1185" width="330" height="57"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Create a Dropbox"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="odu-jD-lSj">
                                         <rect key="frame" x="22" y="1255" width="330" height="57"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Sign in to My Dropbox">
+                                        <state key="normal">
                                             <color key="titleColor" red="0.01176470588" green="0.49396455290000002" blue="0.89747482540000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
@@ -94,8 +93,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" id="A7q-Ac-hMd">
-                                <frame key="frameInset"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <frame key="frameInset" height="100.00%"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" image="create_text" id="FcT-MM-3NV">
                                         <rect key="frame" x="27" y="19" width="320" height="63"/>
@@ -284,20 +283,123 @@
             </objects>
             <point key="canvasLocation" x="3073" y="581"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="6XW-4G-dNm">
+        <!--Settings View Controller-->
+        <scene sceneID="C6A-r5-sEi">
             <objects>
-                <viewController id="33v-lj-eQE" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8h9-vm-dvg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController storyboardIdentifier="settingsView" id="fK2-GZ-Ggj" customClass="SettingsViewController" customModule="CarouselDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" misplaced="YES" id="Bzf-6y-VE3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="879"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" id="LmV-1I-Y33">
+                                <frame key="frameInset"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" misplaced="YES" image="settings" id="llW-Pc-xlu">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="815"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3II-FR-NFq">
+                                        <rect key="frame" x="8" y="730" width="359" height="51"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="didPressSignOut:" destination="fK2-GZ-Ggj" eventType="touchUpInside" id="3aW-Yl-OUc"/>
+                                            <segue destination="Al6-6f-nEe" kind="modal" modalTransitionStyle="crossDissolve" id="GFg-Xg-Blq"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="2nq-0w-OW3"/>
+                    <navigationItem key="navigationItem" id="gjI-Th-Lc6">
+                        <barButtonItem key="leftBarButtonItem" image="close_icon" id="kbY-qO-yy4">
+                            <connections>
+                                <action selector="didPressClose:" destination="fK2-GZ-Ggj" id="s4v-z0-Msx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="879"/>
+                    <connections>
+                        <outlet property="settingsImage" destination="llW-Pc-xlu" id="0gG-Zw-wfF"/>
+                        <outlet property="settingsScrollView" destination="LmV-1I-Y33" id="fAK-pG-cig"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yo6-l7-yDA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5231.5" y="-442.5"/>
+        </scene>
+        <!--Feed View Controller-->
+        <scene sceneID="6XW-4G-dNm">
+            <objects>
+                <viewController id="33v-lj-eQE" customClass="FeedViewController" customModule="CarouselDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8h9-vm-dvg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="2000"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" id="i2b-PJ-aTX">
+                                <frame key="frameInset" height="95.00%"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" misplaced="YES" image="feed" id="mDf-R2-fKk">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1836"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                </subviews>
+                            </scrollView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" misplaced="YES" image="scrubber" id="FjS-9i-wWx">
+                                <frame key="frameInset" width="375" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2nq-0w-OW3">
+                        <barButtonItem key="leftBarButtonItem" title="profile" id="Y1y-NN-2gX">
+                            <connections>
+                                <action selector="didPressSettings:" destination="33v-lj-eQE" id="WSo-8w-b0S"/>
+                                <segue destination="s91-W3-xMA" kind="modal" id="Rbl-Ye-DSE"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="chat_bubble_icon" id="2lc-bu-gXh">
+                            <connections>
+                                <segue destination="hrb-SD-Gwv" kind="push" id="Vs0-EQ-J8o"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="2000"/>
+                    <connections>
+                        <outlet property="feedImage" destination="mDf-R2-fKk" id="iGK-E5-Jro"/>
+                        <outlet property="scrollView" destination="i2b-PJ-aTX" id="CRw-lY-N5r"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IEs-bB-DoB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4157.5" y="464.5"/>
+            <point key="canvasLocation" x="4157.5" y="464"/>
+        </scene>
+        <!--Conversations View Controller-->
+        <scene sceneID="gAQ-At-iot">
+            <objects>
+                <viewController id="hrb-SD-Gwv" customClass="ConversationsViewController" customModule="CarouselDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nVa-rL-aMx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" misplaced="YES" image="conversations" id="HuP-Sj-bKx">
+                                <frame key="frameInset" minY="-12" width="375" height="666"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="faF-Xq-l96"/>
+                    <modalPageSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IcJ-PX-8vA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4644.5" y="489.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="xkA-oC-O1U">
@@ -364,10 +466,32 @@
             </objects>
             <point key="canvasLocation" x="3605" y="465"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mzM-gJ-znF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="s91-W3-xMA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="naa-vK-29d">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fK2-GZ-Ggj" kind="relationship" relationship="rootViewController" id="L6e-Ub-aDP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L5f-9t-6Bc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4645" y="-559"/>
+        </scene>
     </scenes>
     <resources>
         <image name="backup_button" width="320" height="97"/>
+        <image name="chat_bubble_icon" width="29" height="24"/>
+        <image name="close_icon" width="19" height="19"/>
+        <image name="conversations" width="320" height="568"/>
         <image name="create_text" width="320" height="63"/>
+        <image name="feed" width="320" height="1564"/>
         <image name="intro" width="320" height="1136"/>
         <image name="intro_tile1" width="153" height="152"/>
         <image name="intro_tile2" width="76" height="75"/>
@@ -376,6 +500,8 @@
         <image name="intro_tile5" width="76" height="75"/>
         <image name="intro_tile6" width="76" height="75"/>
         <image name="login_form" width="320" height="113"/>
+        <image name="scrubber" width="320" height="36"/>
+        <image name="settings" width="320" height="695"/>
         <image name="sign_in_buttons" width="320" height="104"/>
         <image name="welcome1" width="320" height="568"/>
         <image name="welcome2" width="320" height="568"/>
