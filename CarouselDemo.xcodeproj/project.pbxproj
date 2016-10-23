@@ -14,6 +14,9 @@
 		4C1D22881DBC24B90022BADD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C1D22861DBC24B90022BADD /* LaunchScreen.storyboard */; };
 		4C1D22931DBC24B90022BADD /* CarouselDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1D22921DBC24B90022BADD /* CarouselDemoTests.swift */; };
 		4C1D229E1DBC24B90022BADD /* CarouselDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1D229D1DBC24B90022BADD /* CarouselDemoUITests.swift */; };
+		4C1D22AC1DBC279B0022BADD /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1D22AB1DBC279B0022BADD /* Common.swift */; };
+		4C1D22AE1DBC2A640022BADD /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1D22AD1DBC2A640022BADD /* IntroViewController.swift */; };
+		4C7BD0AE1DBC2C5B00EC7D89 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7BD0AD1DBC2C5B00EC7D89 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		4C1D22991DBC24B90022BADD /* CarouselDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarouselDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C1D229D1DBC24B90022BADD /* CarouselDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselDemoUITests.swift; sourceTree = "<group>"; };
 		4C1D229F1DBC24B90022BADD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C1D22AB1DBC279B0022BADD /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		4C1D22AD1DBC2A640022BADD /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		4C7BD0AD1DBC2C5B00EC7D89 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +105,9 @@
 			children = (
 				4C1D227D1DBC24B90022BADD /* AppDelegate.swift */,
 				4C1D227F1DBC24B90022BADD /* ViewController.swift */,
+				4C1D22AB1DBC279B0022BADD /* Common.swift */,
 				4C1D22811DBC24B90022BADD /* Main.storyboard */,
+				4C7BD0AF1DBC2C6000EC7D89 /* ViewControllers */,
 				4C1D22841DBC24B90022BADD /* Assets.xcassets */,
 				4C1D22861DBC24B90022BADD /* LaunchScreen.storyboard */,
 				4C1D22891DBC24B90022BADD /* Info.plist */,
@@ -123,6 +131,15 @@
 				4C1D229F1DBC24B90022BADD /* Info.plist */,
 			);
 			path = CarouselDemoUITests;
+			sourceTree = "<group>";
+		};
+		4C7BD0AF1DBC2C6000EC7D89 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4C7BD0AD1DBC2C5B00EC7D89 /* LoginViewController.swift */,
+				4C1D22AD1DBC2A640022BADD /* IntroViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,7 +277,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C1D22801DBC24B90022BADD /* ViewController.swift in Sources */,
+				4C1D22AC1DBC279B0022BADD /* Common.swift in Sources */,
 				4C1D227E1DBC24B90022BADD /* AppDelegate.swift in Sources */,
+				4C7BD0AE1DBC2C5B00EC7D89 /* LoginViewController.swift in Sources */,
+				4C1D22AE1DBC2A640022BADD /* IntroViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,6 +523,7 @@
 				4C1D22A41DBC24B90022BADD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4C1D22A51DBC24B90022BADD /* Build configuration list for PBXNativeTarget "CarouselDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +532,7 @@
 				4C1D22A71DBC24B90022BADD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4C1D22A81DBC24B90022BADD /* Build configuration list for PBXNativeTarget "CarouselDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +541,7 @@
 				4C1D22AA1DBC24B90022BADD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
