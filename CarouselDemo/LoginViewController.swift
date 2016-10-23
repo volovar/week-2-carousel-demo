@@ -32,15 +32,10 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.isTranslucent = false
         
-        //TODO not working, fix it
-        navigationController?.navigationItem.backBarButtonItem?.title = ""
-        
         // scroll view
         scrollView.delegate = self
         scrollView.contentSize = scrollView.frame.size
         print(scrollView.frame.size)
-//        scrollView.contentInset.bottom = 100
-        
         
         
         // keyboard events

@@ -17,6 +17,8 @@ class IntroViewController: UIViewController {
         super.viewDidLoad()
     
         scrollView.contentSize = introImage.frame.size
+        
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {

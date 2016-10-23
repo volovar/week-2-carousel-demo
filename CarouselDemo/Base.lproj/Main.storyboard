@@ -307,6 +307,31 @@
                                             <segue destination="Al6-6f-nEe" kind="modal" modalTransitionStyle="crossDissolve" id="GFg-Xg-Blq"/>
                                         </connections>
                                     </button>
+                                    <view contentMode="scaleToFill" misplaced="YES" id="Vd3-or-Tar">
+                                        <rect key="frame" x="67" y="14" width="240" height="182"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Mike Volovar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Sqm-o7-Cd5">
+                                                <frame key="frameInset" minX="62" minY="128" width="116" height="23"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                                <color key="textColor" red="0.22819781303405762" green="0.25963222980499268" blue="0.28591129183769226" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="highlightedColor" red="0.2190907895565033" green="0.24627095460891724" blue="0.27279728651046753" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="mikev@gmail.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iai-fa-u0X">
+                                                <frame key="frameInset" minX="31" minY="150" width="178" height="23"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <color key="textColor" red="0.64350569248199463" green="0.67342883348464966" blue="0.68773233890533447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="highlightedColor" red="0.2190907896" green="0.24627095460000001" blue="0.27279728650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </label>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" image="profile_image" id="US3-xy-lKh">
+                                                <frame key="frameInset" minX="67" minY="10" width="106" height="106"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.94184619188308716" green="0.95277887582778931" blue="0.95902973413467407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
                                 </subviews>
                             </scrollView>
                         </subviews>
@@ -356,11 +381,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="2nq-0w-OW3">
-                        <barButtonItem key="leftBarButtonItem" title="profile" id="Y1y-NN-2gX">
-                            <connections>
-                                <action selector="didPressSettings:" destination="33v-lj-eQE" id="WSo-8w-b0S"/>
-                                <segue destination="s91-W3-xMA" kind="modal" id="Rbl-Ye-DSE"/>
-                            </connections>
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="Y3I-q3-XTW">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Ai4-wF-1jd">
+                                <rect key="frame" x="16" y="6" width="32" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="settings_icon"/>
+                                <connections>
+                                    <segue destination="s91-W3-xMA" kind="modal" id="ham-FJ-xIS"/>
+                                </connections>
+                            </button>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="chat_bubble_icon" id="2lc-bu-gXh">
                             <connections>
@@ -500,8 +529,10 @@
         <image name="intro_tile5" width="76" height="75"/>
         <image name="intro_tile6" width="76" height="75"/>
         <image name="login_form" width="320" height="113"/>
+        <image name="profile_image" width="106" height="106"/>
         <image name="scrubber" width="320" height="36"/>
         <image name="settings" width="320" height="695"/>
+        <image name="settings_icon" width="64" height="64"/>
         <image name="sign_in_buttons" width="320" height="104"/>
         <image name="welcome1" width="320" height="568"/>
         <image name="welcome2" width="320" height="568"/>
