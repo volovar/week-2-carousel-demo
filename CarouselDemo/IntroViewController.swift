@@ -34,16 +34,17 @@ class IntroViewController: UIViewController, UIScrollViewDelegate {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        navigationController?.isNavigationBarHidden = true
+        // hide the navigation bar with animation to prevent page jumping / black background
+        navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        navigationController?.isNavigationBarHidden = false
+        // set the navigation bar back to visible for the next view
+        navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let offset = Float(scrollView.contentOffset.y)
-        print("content offset: \(offset)")
         
         if offset > 670 {
             return

@@ -64,7 +64,7 @@
                                             <color key="titleColor" red="0.01176470588" green="0.49396455290000002" blue="0.89747482540000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="6nc-75-dED" kind="push" id="ufd-n1-XU2"/>
+                                            <segue destination="6nc-75-dED" kind="push" animates="NO" id="ufd-n1-XU2"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -102,32 +102,32 @@
                                 <frame key="frameInset" height="100.00%"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" image="create_text" id="FcT-MM-3NV">
-                                        <rect key="frame" x="27" y="19" width="320" height="63"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                    </imageView>
                                     <view contentMode="scaleToFill" misplaced="YES" id="F1C-u7-LJf" userLabel="fieldSuperview">
-                                        <rect key="frame" x="27" y="98" width="320" height="128"/>
+                                        <rect key="frame" x="27" y="21" width="320" height="205"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" image="login_form" id="QLE-ZR-DE0">
-                                                <frame key="frameInset" minX="1" minY="8" width="320" height="113"/>
+                                                <frame key="frameInset" minY="84" width="320" height="113"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </imageView>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" id="O2O-GX-ICW">
-                                                <frame key="frameInset" minX="22" minY="29" width="281" height="30"/>
+                                                <frame key="frameInset" minX="21" minY="105" width="281" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" id="383-N3-f81">
-                                                <frame key="frameInset" minX="22" minY="74" width="281" height="30"/>
+                                                <frame key="frameInset" minX="21" minY="150" width="281" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                                             </textField>
+                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" image="create_text" id="FcT-MM-3NV">
+                                                <frame key="frameInset" minY="13" width="320" height="63"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
@@ -169,6 +169,7 @@
                         <outlet property="activityIndicator" destination="DNS-wo-a2D" id="8sB-at-fGI"/>
                         <outlet property="buttonSuperview" destination="OJT-kI-i8T" id="Cpf-a9-QZR"/>
                         <outlet property="emailField" destination="O2O-GX-ICW" id="1DE-LW-K2X"/>
+                        <outlet property="fieldSuperview" destination="F1C-u7-LJf" id="wbt-aA-V6L"/>
                         <outlet property="passwordField" destination="383-N3-f81" id="UpZ-dR-oNc"/>
                         <outlet property="scrollView" destination="A7q-Ac-hMd" id="jBC-Km-5j7"/>
                         <segue destination="dfy-T6-M9n" kind="modal" identifier="loginSegue" id="oAX-zj-Ox9"/>
@@ -468,7 +469,7 @@
         <!--Navigation Controller-->
         <scene sceneID="YfY-cB-iHE">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Al6-6f-nEe" sceneMemberID="viewController">
+                <navigationController extendedLayoutIncludesOpaqueBars="YES" automaticallyAdjustsScrollViewInsets="NO" id="Al6-6f-nEe" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="4nG-lv-rxD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

@@ -10,6 +10,7 @@ import UIKit
 
 class LoginViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var fieldSuperview: UIView!
     @IBOutlet weak var buttonSuperview: UIView!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
@@ -49,6 +50,21 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
             self.scrollView.contentOffset.y = 0
         }
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        var t = CGAffineTransform.identity
+        t = t.scaledBy(x: 0.2, y: 0.2)
+        
+        fieldSuperview.transform = t
+        fieldSuperview.alpha = 0
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        UIView.animate(withDuration: 0.3) {
+            self.fieldSuperview.transform = CGAffineTransform.identity
+            self.fieldSuperview.alpha = 1
+        }
+    }
 
     @IBAction func didPressLogin(_ sender: AnyObject) {
         if emailField.hasText && passwordField.hasText {
@@ -84,4 +100,16 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
     @IBAction func didTapOutsideKeyboard(_ sender: AnyObject) {
         view.endEditing(true)
     }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offset = scrollView.contentOffset.y
+        
+        if offset >= -50 {
+            return
+        }
+        
+        view.endEditing(true)
+    }
+    
+    
 }
