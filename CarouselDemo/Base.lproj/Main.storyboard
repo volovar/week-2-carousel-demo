@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES" initialViewController="2F8-n6-Eqh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES" initialViewController="Al6-6f-nEe">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -78,6 +78,12 @@
                     <connections>
                         <outlet property="introImage" destination="nUp-ob-kzC" id="z8F-xK-Tq3"/>
                         <outlet property="scrollView" destination="egA-QP-Slb" id="gn7-Ee-kgo"/>
+                        <outlet property="tile1View" destination="4AJ-aA-vhR" id="1YL-e3-uqZ"/>
+                        <outlet property="tile2View" destination="luv-2d-Tuz" id="hRc-Er-Ghh"/>
+                        <outlet property="tile3View" destination="VHC-zp-8BW" id="bk9-P7-Bul"/>
+                        <outlet property="tile4View" destination="3Ar-TR-btM" id="VXZ-pv-VMr"/>
+                        <outlet property="tile5View" destination="frW-xe-duA" id="NbG-2i-3yn"/>
+                        <outlet property="tile6View" destination="LWp-Ii-fWp" id="346-ex-ALY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -304,7 +310,6 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <connections>
                                             <action selector="didPressSignOut:" destination="fK2-GZ-Ggj" eventType="touchUpInside" id="3aW-Yl-OUc"/>
-                                            <segue destination="Al6-6f-nEe" kind="modal" modalTransitionStyle="crossDissolve" id="GFg-Xg-Blq"/>
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" misplaced="YES" id="Vd3-or-Tar">
@@ -349,6 +354,7 @@
                     <connections>
                         <outlet property="settingsImage" destination="llW-Pc-xlu" id="0gG-Zw-wfF"/>
                         <outlet property="settingsScrollView" destination="LmV-1I-Y33" id="fAK-pG-cig"/>
+                        <segue destination="Al6-6f-nEe" kind="modal" identifier="signOutSegue" modalTransitionStyle="crossDissolve" id="tbF-B4-y2N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yo6-l7-yDA" userLabel="First Responder" sceneMemberID="firstResponder"/>

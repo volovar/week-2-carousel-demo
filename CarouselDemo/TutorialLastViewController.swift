@@ -19,6 +19,8 @@ class TutorialLastViewController: UIViewController {
         
         buttonInitialY = buttonSuperview.frame.origin.y
         buttonOffset = buttonInitialY - (buttonSuperview.frame.height * 1.5)
+        
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {

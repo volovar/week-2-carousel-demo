@@ -25,7 +25,19 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func didPressSignOut(_ sender: AnyObject) {
-        // do something here
-        print("pressed sign out")
+        let actionController = UIAlertController(title: "", message: "Are you sure you want to Sign Out?", preferredStyle: .actionSheet)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        actionController.addAction(cancelAction)
+        
+        let signOutAction = UIAlertAction(title: "Sign Out", style: .destructive) { (UIAlertAction) in
+            print("pressed sign out")
+            self.performSegue(withIdentifier: "signOutSegue", sender: sender)
+        }
+        
+        actionController.addAction(signOutAction)
+        
+        present(actionController, animated: true, completion: nil)
     }
 }

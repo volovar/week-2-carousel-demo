@@ -10,11 +10,13 @@ import UIKit
 
 class TutorialPageViewController: UIPageViewController {
     var pages = [UIViewController]()
+    var pageControl = UIPageControl()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         dataSource = self
+        delegate = self
         
         let page1: UIViewController! = storyboard?.instantiateViewController(withIdentifier: "page1")
         let page2: UIViewController! = storyboard?.instantiateViewController(withIdentifier: "page2")
@@ -28,6 +30,7 @@ class TutorialPageViewController: UIPageViewController {
         
         setViewControllers([page1], direction: .forward, animated: false, completion: nil)
     }
+    
     
     
 }
@@ -62,3 +65,20 @@ extension TutorialPageViewController: UIPageViewControllerDataSource {
         return 0
     }
 }
+
+extension TutorialPageViewController: UIPageViewControllerDelegate {
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        if !completed {
+            return
+        }
+        
+        print(pageControl.isHidden)
+        
+        if pages[2] == previousViewControllers.last && !pageControl.isHidden {
+            pageControl.isHidden = true
+        } else if pageControl.isHidden {
+            pageControl.isHidden = false
+        }
+    }
+}
+
