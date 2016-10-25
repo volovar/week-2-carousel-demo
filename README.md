@@ -2,7 +2,7 @@
 
 The purpose of this homework is to leverage views, view properties, and events to create a high fidelity prototype that is difficult to distinguish from a production app. We're going to use the techniques from this week to implement the Carousel app from the signed out state to the basic signed in state.
 
-Time spent: `10.5 hours`
+Time spent: `12.5 hours`
 
 ### Features
 
@@ -59,6 +59,9 @@ Time spent: `10.5 hours`
 - [X] Implemented working navigation controllers instead of images
 - [X] Customized settings / profile images to fit with login details
 - [X] Used a Page View Controller for tutorial screens instead of a scroll view
+- [X] Additional photo views
+- [X] Can swipe between photos as well as swiping over the scrubber (future update: would like to add visual feedback to the scrubber / make it "real")
+- [X] Used a dictionary to keep the state of the banner events
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
@@ -72,9 +75,11 @@ Here's a walkthrough of implemented user stories:
 
 <img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
+<a href="https://github.com/volovar/week-2-carousel-demo/blob/master/demo/carousel-demo.gif" target="_blank"><img src='/demo/carousel-demo.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' /></a>
+
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Main challenges this time were running into errors and debugging them. Mostly simple stuff too, just things I haven't seen before. Customizing navigation bars proved challenging as well. There are certain ways Apple wants elements to be implemented and it's hard to work around them without creating something completely custom.
+Main challenges this time were running into errors and debugging them. Mostly simple stuff too, just things I haven't seen before. Customizing navigation bars proved challenging as well. There are certain ways Apple wants elements to be implemented and it's hard to work around them without creating something completely custom. Upon completion, it feels like there's a bunch of additional work that can be done to make this even better and closer to being a real app. I'm going to spend some more time getting it in an even better state. A fun project!
 
