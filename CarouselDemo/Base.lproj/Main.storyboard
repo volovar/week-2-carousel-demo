@@ -205,6 +205,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="hGE-3Y-d2z"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ggV-MT-Y2C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -303,6 +304,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="iEE-JZ-3xc" userLabel="create">
                                                 <frame key="frameInset" minX="31" minY="4" width="282" height="52"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <connections>
+                                                    <segue destination="dfy-T6-M9n" kind="modal" modalTransitionStyle="crossDissolve" id="ySA-5e-xdq"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -730,4 +734,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="ySA-5e-xdq"/>
+    </inferredMetricsTieBreakers>
 </document>
