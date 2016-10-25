@@ -19,8 +19,8 @@ class IntroViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var tile5View: UIImageView!
     @IBOutlet weak var tile6View: UIImageView!
     
-    var yOffsets: [CGFloat] = [-285, -240, -415, -408, -480, -500]
-    var xOffsets: [CGFloat] = [-30, 75, -66, 10, -200, -15]
+    var yOffsets: [CGFloat] = [-335, -300, -484, -474, -590, -570]
+    var xOffsets: [CGFloat] = [-80, 50, 20, 90, -130, -110]
     var scales: [CGFloat] = [1, 1.65, 1.7, 1.6, 1.65, 1.65]
     var rotations: [CGFloat] = [-10, -10, 10, 10, 10, -10]
     
@@ -51,7 +51,9 @@ class IntroViewController: UIViewController, UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let offset = Float(scrollView.contentOffset.y)
         
-        if offset > 670 {
+        print(tile1View.frame.origin.y)
+        
+        if offset > 670 && tile1View.frame.origin.y >= 879.0 {
             return
         }
         

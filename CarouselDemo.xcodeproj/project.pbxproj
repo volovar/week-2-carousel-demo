@@ -27,6 +27,7 @@
 		4CB67C461DBED60E003E378A /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB67C451DBED60E003E378A /* TermsViewController.swift */; };
 		4CB67C481DBEE2F6003E378A /* BannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB67C471DBEE2F6003E378A /* BannerViewController.swift */; };
 		4CB67C4A1DBEE500003E378A /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB67C491DBEE500003E378A /* PhotoDetailViewController.swift */; };
+		4CB67C4C1DBF0763003E378A /* PhotosPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB67C4B1DBF0763003E378A /* PhotosPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		4CB67C451DBED60E003E378A /* TermsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsViewController.swift; sourceTree = "<group>"; };
 		4CB67C471DBEE2F6003E378A /* BannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerViewController.swift; sourceTree = "<group>"; };
 		4CB67C491DBEE500003E378A /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
+		4CB67C4B1DBF0763003E378A /* PhotosPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 				4C1D22841DBC24B90022BADD /* Assets.xcassets */,
 				4C1D22861DBC24B90022BADD /* LaunchScreen.storyboard */,
 				4C1D22891DBC24B90022BADD /* Info.plist */,
+				4CB67C4B1DBF0763003E378A /* PhotosPageViewController.swift */,
 			);
 			path = CarouselDemo;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 			files = (
 				4C1D22801DBC24B90022BADD /* ViewController.swift in Sources */,
 				4CB67C3E1DBC6A8D003E378A /* FeedViewController.swift in Sources */,
+				4CB67C4C1DBF0763003E378A /* PhotosPageViewController.swift in Sources */,
 				4CB67C361DBC59DB003E378A /* TutorialViewController.swift in Sources */,
 				4CB67C4A1DBEE500003E378A /* PhotoDetailViewController.swift in Sources */,
 				4CB67C461DBED60E003E378A /* TermsViewController.swift in Sources */,

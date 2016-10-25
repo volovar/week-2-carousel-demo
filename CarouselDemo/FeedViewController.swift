@@ -12,17 +12,13 @@ class FeedViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var feedImage: UIImageView!
     @IBOutlet weak var bannerSuperview: UIView!
-    
-    var initialY: CGFloat!
-    var offset: CGFloat!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        initialY = feedImage.frame.origin.y
-        offset = initialY - 51
-        
         scrollView.contentSize = feedImage.frame.size
+        scrollView.contentInset.top = 51
+        scrollView.contentOffset.y = -54
         
         navigationController?.navigationBar.barTintColor = UIColor.white
         
@@ -42,7 +38,7 @@ class FeedViewController: UIViewController {
             self.bannerSuperview.transform = CGAffineTransform(translationX: 0, y: -51)
             self.bannerSuperview.alpha = 0
             
-            self.feedImage.frame.origin.y = self.offset
+            self.scrollView.contentInset.top = 64
         }
     }
     
@@ -61,17 +57,21 @@ class FeedViewController: UIViewController {
     
     @IBAction func didSwipeRight(_ sender: AnyObject) {
         UIView.animate(withDuration: 0.3) {
-            self.scrollView.contentOffset.y = 240
+            self.scrollView.contentOffset.y = 189
         }
         
         checklist["didSwipePhoto"] = true
         
         checkBannerStatus()
     }
-    
+  
     @IBAction func didSwipeLeft(_ sender: AnyObject) {
         UIView.animate(withDuration: 0.3) {
-            self.scrollView.contentOffset.y = -64
+            self.scrollView.contentOffset.y = -115
         }
+    }
+    
+    @IBAction func didPressViewDetail(_ sender: AnyObject) {
+//        prepare(for: UIStoryboardSegue, sender: UIButton.self)
     }
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES" initialViewController="2F8-n6-Eqh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES" initialViewController="Al6-6f-nEe">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -29,12 +29,12 @@
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <color key="highlightedColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     </label>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" image="intro_tile1" id="4AJ-aA-vhR">
-                                        <rect key="frame" x="54" y="879" width="180" height="180"/>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" image="intro_tile5" id="frW-xe-duA">
+                                        <rect key="frame" x="144" y="1061" width="90" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" image="intro_tile2" id="luv-2d-Tuz">
-                                        <rect key="frame" x="236" y="879" width="90" height="90"/>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" image="intro_tile6" id="LWp-Ii-fWp">
+                                        <rect key="frame" x="236" y="1061" width="90" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" image="intro_tile3" id="VHC-zp-8BW">
@@ -45,12 +45,12 @@
                                         <rect key="frame" x="54" y="1061" width="90" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" image="intro_tile5" id="frW-xe-duA">
-                                        <rect key="frame" x="144" y="1061" width="90" height="90"/>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" image="intro_tile2" id="luv-2d-Tuz">
+                                        <rect key="frame" x="236" y="879" width="90" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" image="intro_tile6" id="LWp-Ii-fWp">
-                                        <rect key="frame" x="236" y="1061" width="90" height="90"/>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" image="intro_tile1" id="4AJ-aA-vhR">
+                                        <rect key="frame" x="54" y="879" width="180" height="180"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="efq-4Q-oNi">
@@ -553,14 +553,29 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" misplaced="YES" image="feed" id="mDf-R2-fKk">
-                                        <rect key="frame" x="0.0" y="51" width="375" height="1834"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1834"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" misplaced="YES" image="heavy_breathing" id="3os-ca-bS0">
+                                        <rect key="frame" x="0.0" y="52" width="125" height="124"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" misplaced="YES" image="doom-original-box-art" id="5ui-Al-hFH">
+                                        <rect key="frame" x="127" y="52" width="124" height="124"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="GY5-aB-8lo" userLabel="viewDetail">
-                                        <rect key="frame" x="0.0" y="105" width="129" height="128"/>
+                                        <rect key="frame" x="0.0" y="52" width="125" height="124"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <connections>
-                                            <segue destination="TE6-TM-2jL" kind="push" id="FIx-yO-7v9"/>
+                                            <segue destination="cBc-rF-pAH" kind="push" identifier="photoDetailSegue" id="qfG-ig-3r6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="409-rh-dcr" userLabel="viewDetail2">
+                                        <rect key="frame" x="127" y="52" width="126" height="124"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="didPressViewDetail:" destination="33v-lj-eQE" eventType="touchUpInside" id="5aV-PR-ipm"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -777,7 +792,7 @@
         <!--Navigation Controller-->
         <scene sceneID="fcR-Hd-FJT">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2F8-n6-Eqh" sceneMemberID="viewController">
+                <navigationController extendedLayoutIncludesOpaqueBars="YES" automaticallyAdjustsScrollViewInsets="NO" id="2F8-n6-Eqh" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="X52-dq-1qr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -792,33 +807,84 @@
             </objects>
             <point key="canvasLocation" x="3605" y="465"/>
         </scene>
-        <!--Photo Detail-->
-        <scene sceneID="dXW-R2-Ccg">
+        <!--Detail View-->
+        <scene sceneID="Eae-Rd-h1i">
             <objects>
-                <viewController id="TE6-TM-2jL" customClass="PhotoDetailViewController" customModule="CarouselDemo" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="AYk-CK-cP6">
+                <viewController id="cBc-rF-pAH" customClass="PhotoDetailViewController" customModule="CarouselDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KcL-KZ-87Y">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" misplaced="YES" image="example2" id="hmB-VY-m5T">
-                                <frame key="frameInset" minY="58" width="375" height="609"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
+                            <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" id="SgM-Vk-lsn">
+                                <frame key="frameInset" width="100.00%" maxY="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES"/>
+                                <connections>
+                                    <segue destination="La9-A7-Os0" kind="embed" id="sT0-Lt-3H3"/>
+                                </connections>
+                            </containerView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Photo Detail" id="ilB-a1-dD8">
-                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="Mnx-rD-TB7">
+                    <navigationItem key="navigationItem" title="Detail View" id="zlI-y1-fpH">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="rOR-KC-z6Q">
                             <connections>
-                                <action selector="didPressAction:" destination="TE6-TM-2jL" id="A3V-p7-BJV"/>
+                                <action selector="didPressAction:" destination="cBc-rF-pAH" id="bfI-7d-1S3"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <modalPageSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0bl-14-mEr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0B2-wH-9aO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4158" y="-966"/>
+            <point key="canvasLocation" x="3713.5" y="-1009.5"/>
+        </scene>
+        <!--Photos Page View Controller-->
+        <scene sceneID="hLz-n9-LI9">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="La9-A7-Os0" customClass="PhotosPageViewController" customModule="CarouselDemo" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sdA-Hi-zzx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4158" y="-1010"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="skK-fd-Tis">
+            <objects>
+                <viewController storyboardIdentifier="photoDetail1" id="D1v-TD-tUY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0Zi-Ok-mCG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" misplaced="YES" image="heavy_breathing" id="9Vp-WJ-teK">
+                                <frame key="frameInset" minY="161" width="375" height="345"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jdg-I2-ClO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4157.5" y="-1750.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="c50-8x-4O7">
+            <objects>
+                <viewController storyboardIdentifier="photoDetail2" id="6Qq-bg-wAI" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wrB-oD-GaV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" misplaced="YES" image="doom-original-box-art" id="BfU-ye-WNo">
+                                <frame key="frameInset" minY="193" width="375" height="281"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RVX-Z3-Kvc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4616.5" y="-1751.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mzM-gJ-znF">
@@ -852,9 +918,10 @@
         <image name="create_button" width="320" height="57"/>
         <image name="create_form" width="320" height="192"/>
         <image name="create_text" width="320" height="63"/>
+        <image name="doom-original-box-art" width="800" height="600"/>
         <image name="example" width="640" height="1136"/>
-        <image name="example2" width="868" height="1408"/>
         <image name="feed" width="320" height="1564"/>
+        <image name="heavy_breathing" width="600" height="553"/>
         <image name="intro" width="320" height="1136"/>
         <image name="intro_tile1" width="153" height="152"/>
         <image name="intro_tile2" width="76" height="75"/>

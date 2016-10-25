@@ -12,8 +12,6 @@ class PhotoDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -21,7 +19,7 @@ class PhotoDetailViewController: UIViewController {
     }
 
     @IBAction func didPressAction(_ sender: AnyObject) {
-        let actionSheetController = UIAlertController(title: "Choose an action", message: "", preferredStyle: .actionSheet)
+        let actionSheetController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         
