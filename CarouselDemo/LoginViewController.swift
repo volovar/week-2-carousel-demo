@@ -28,16 +28,12 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
         // does it matter which version is used?
         // UINavigationBar.appearance().setBackgroundImage(UIImage().init, for: .default)
         // UINavigationBar.appearance().shadowImage = UIImage.init()
-        navigationController?.navigationBar.barTintColor = UIColor.white
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        navigationController?.navigationBar.shadowImage = UIImage()
-        navigationController?.navigationBar.isTranslucent = false
+        // navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        // navigationController?.navigationBar.shadowImage = UIImage()
         
         // scroll view
         scrollView.delegate = self
         scrollView.contentSize = scrollView.frame.size
-        print(scrollView.frame.size)
-        
         
         // keyboard events
         NotificationCenter.default.addObserver(forName: .UIKeyboardWillShow, object: nil, queue: OperationQueue.main) { (Notification) in

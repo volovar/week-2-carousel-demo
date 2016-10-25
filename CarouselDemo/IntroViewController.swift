@@ -31,6 +31,11 @@ class IntroViewController: UIViewController, UIScrollViewDelegate {
         scrollView.delegate = self
         
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        
+        navigationController?.navigationBar.barTintColor = UIColor.white
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.isTranslucent = false
     }
     
     override func viewWillAppear(_ animated: Bool) {
