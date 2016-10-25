@@ -2,7 +2,7 @@
 
 The purpose of this homework is to leverage views, view properties, and events to create a high fidelity prototype that is difficult to distinguish from a production app. We're going to use the techniques from this week to implement the Carousel app from the signed out state to the basic signed in state.
 
-Time spent: `10 hours`
+Time spent: `10.5 hours`
 
 ### Features
 
@@ -49,7 +49,7 @@ Time spent: `10 hours`
   - [X] Tap the X to dismiss the banner.
   - [X] Track the 3 events:
      - (1) View a photo full screen, (2) Swipe left and right and (3) Share a photo  - Upon completion of the events, mark them green.
-  - [ ] When all events are completed, dismiss the banner.
+  - [X] When all events are completed, dismiss the banner.
 1. Settings
   - [X] User is presented with an action sheet with actions to cancel or logout.
 
@@ -64,6 +64,7 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 1. Naming conventions for methods; in same vein, code organization in view controller classes
 2. Navigation bars and their appearance and animation
+3. Implementation of the 'photo scrubber'
 
 ### Video Walkthrough 
 
