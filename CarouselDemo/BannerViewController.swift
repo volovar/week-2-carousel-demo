@@ -24,6 +24,14 @@ class BannerViewController: UIViewController {
         if checklist["didViewPhoto"] == true {
             checkbox1.isSelected = true
         }
+        
+        if checklist["didSwipePhoto"] == true {
+            checkbox2.isSelected = true
+        }
+        
+        if checklist["didSharePhoto"] == true {
+            checkbox3.isSelected = true
+        }
     }
     
     @IBAction func didPressClose(_ sender: AnyObject) {

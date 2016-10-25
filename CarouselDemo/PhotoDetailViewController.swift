@@ -20,4 +20,19 @@ class PhotoDetailViewController: UIViewController {
         checklist["didViewPhoto"] = true
     }
 
+    @IBAction func didPressAction(_ sender: AnyObject) {
+        let actionSheetController = UIAlertController(title: "Choose an action", message: "", preferredStyle: .actionSheet)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        actionSheetController.addAction(cancelAction)
+        
+        let shareAction = UIAlertAction(title: "Share", style: .default) { (UIAlertAction) in
+            checklist["didSharePhoto"] = true
+        }
+        
+        actionSheetController.addAction(shareAction)
+        
+        present(actionSheetController, animated: true, completion: nil)
+    }
 }

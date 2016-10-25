@@ -33,6 +33,10 @@ class FeedViewController: UIViewController {
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        checkBannerStatus()
+    }
+    
     func hideBanner() {
         UIView.animate(withDuration: 0.4) {
             self.bannerSuperview.transform = CGAffineTransform(translationX: 0, y: -51)
@@ -42,9 +46,32 @@ class FeedViewController: UIViewController {
         }
     }
     
+    // checks if all values in 'checklist' are true and hides the banner if they are
+    func checkBannerStatus() {
+        if checklist["didViewPhoto"] == true && checklist["didSwipePhoto"] == true && checklist["didSharePhoto"] == true {
+            hideBanner()
+        }
+    }
+    
     @IBAction func didPressCloseBanner(_ sender: AnyObject) {
         checklist[""] = true
         
         hideBanner()
+    }
+    
+    @IBAction func didSwipeRight(_ sender: AnyObject) {
+        UIView.animate(withDuration: 0.3) {
+            self.scrollView.contentOffset.y = 240
+        }
+        
+        checklist["didSwipePhoto"] = true
+        
+        checkBannerStatus()
+    }
+    
+    @IBAction func didSwipeLeft(_ sender: AnyObject) {
+        UIView.animate(withDuration: 0.3) {
+            self.scrollView.contentOffset.y = -64
+        }
     }
 }
