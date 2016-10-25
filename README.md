@@ -45,9 +45,9 @@ Time spent: `9 hours`
   - [X] User can page between the screens with updated dots.
   - [ ] Upon reaching the 4th page, the page indicator dots are hidden and "Take Carousel for a Spin" button is shown.
 1. Learn more about Carousel:
-  - [ ] Show the "Learn more about Carousel" button in the photo timeline.
-  - [ ] Tap the X to dismiss the banner.
-  - [ ] Track the 3 events:
+  - [X] Show the "Learn more about Carousel" button in the photo timeline.
+  - [X] Tap the X to dismiss the banner.
+  - [X] Track the 3 events:
      - (1) View a photo full screen, (2) Swipe left and right and (3) Share a photo  - Upon completion of the events, mark them green.
   - [ ] When all events are completed, dismiss the banner.
 1. Settings
