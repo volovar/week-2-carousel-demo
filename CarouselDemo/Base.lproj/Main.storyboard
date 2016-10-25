@@ -549,19 +549,55 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" id="i2b-PJ-aTX">
-                                <frame key="frameInset" height="95.00%"/>
+                                <frame key="frameInset" height="97.45%"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" misplaced="YES" image="feed" id="mDf-R2-fKk">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1836"/>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" misplaced="YES" image="feed" id="mDf-R2-fKk">
+                                        <rect key="frame" x="0.0" y="51" width="375" height="1834"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="GY5-aB-8lo" userLabel="viewDetail">
+                                        <rect key="frame" x="0.0" y="105" width="129" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <segue destination="TE6-TM-2jL" kind="push" id="FIx-yO-7v9"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </scrollView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" misplaced="YES" image="scrubber" id="FjS-9i-wWx">
                                 <frame key="frameInset" width="375" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                             </imageView>
+                            <view contentMode="scaleToFill" misplaced="YES" id="Kg8-hM-pIs" userLabel="bannerSuperview">
+                                <frame key="frameInset" minY="64" width="375" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" misplaced="YES" image="banner" id="mcc-ot-WaM">
+                                        <frame key="frameInset" width="375" height="51"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3g9-Of-Lmh" userLabel="learnMore">
+                                        <frame key="frameInset" width="321" height="51"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <segue destination="yGS-UW-yaa" kind="modal" id="Mes-cz-RSe"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="IJE-Os-SUj">
+                                        <frame key="frameInset" minX="329" minY="10" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <state key="normal" title="X">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didPressCloseBanner:" destination="33v-lj-eQE" eventType="touchUpInside" id="NNb-bR-eEY"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -585,6 +621,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="2000"/>
                     <connections>
+                        <outlet property="bannerSuperview" destination="Kg8-hM-pIs" id="vWQ-3Z-A3S"/>
                         <outlet property="feedImage" destination="mDf-R2-fKk" id="iGK-E5-Jro"/>
                         <outlet property="scrollView" destination="i2b-PJ-aTX" id="CRw-lY-N5r"/>
                     </connections>
@@ -592,6 +629,59 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IEs-bB-DoB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4157.5" y="464"/>
+        </scene>
+        <!--Banner View Controller-->
+        <scene sceneID="a4V-Yy-GpB">
+            <objects>
+                <viewController id="yGS-UW-yaa" customClass="BannerViewController" customModule="CarouselDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DVG-UM-6wV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" misplaced="YES" image="example" id="bb8-3Q-8ju">
+                                <frame key="frameInset" minY="-18" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wv7-df-daF">
+                                <frame key="frameInset" minX="16" minY="20" width="35" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="didPressClose:" destination="yGS-UW-yaa" eventType="touchUpInside" id="mdI-zd-HpL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="9c6-Kq-Mvb">
+                                <frame key="frameInset" minX="22" minY="385" width="33" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="checkbox_unchecked"/>
+                                <state key="selected" image="checkbox_complete"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Mic-n8-54v">
+                                <frame key="frameInset" minX="22" minY="460" width="33" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="checkbox_unchecked"/>
+                                <state key="selected" image="checkbox_complete"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="1eo-uW-8bX">
+                                <frame key="frameInset" minX="22" minY="535" width="33" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="checkbox_unchecked"/>
+                                <state key="selected" image="checkbox_complete"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.95211189985275269" green="0.95959740877151489" blue="0.97265225648880005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="checkbox1" destination="9c6-Kq-Mvb" id="jJl-by-IAn"/>
+                        <outlet property="checkbox2" destination="Mic-n8-54v" id="fY4-a6-8T1"/>
+                        <outlet property="checkbox3" destination="1eo-uW-8bX" id="4OG-HT-NYN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4dW-eO-kdM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4157.5" y="1921.5"/>
         </scene>
         <!--Conversations View Controller-->
         <scene sceneID="gAQ-At-iot">
@@ -680,6 +770,28 @@
             </objects>
             <point key="canvasLocation" x="3605" y="465"/>
         </scene>
+        <!--Photo Detail-->
+        <scene sceneID="dXW-R2-Ccg">
+            <objects>
+                <viewController id="TE6-TM-2jL" customClass="PhotoDetailViewController" customModule="CarouselDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AYk-CK-cP6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" misplaced="YES" image="example2" id="hmB-VY-m5T">
+                                <frame key="frameInset" minY="58" width="375" height="609"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Photo Detail" id="ilB-a1-dD8"/>
+                    <modalPageSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0bl-14-mEr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4158" y="-966"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="mzM-gJ-znF">
             <objects>
@@ -701,14 +813,19 @@
     </scenes>
     <resources>
         <image name="backup_button" width="320" height="97"/>
+        <image name="banner" width="319" height="44"/>
         <image name="chat_bubble_icon" width="29" height="24"/>
         <image name="check_box" width="20" height="20"/>
         <image name="check_box_selected" width="20" height="20"/>
+        <image name="checkbox_complete" width="24" height="24"/>
+        <image name="checkbox_unchecked" width="23" height="23"/>
         <image name="close_icon" width="19" height="19"/>
         <image name="conversations" width="320" height="568"/>
         <image name="create_button" width="320" height="57"/>
         <image name="create_form" width="320" height="192"/>
         <image name="create_text" width="320" height="63"/>
+        <image name="example" width="640" height="1136"/>
+        <image name="example2" width="868" height="1408"/>
         <image name="feed" width="320" height="1564"/>
         <image name="intro" width="320" height="1136"/>
         <image name="intro_tile1" width="153" height="152"/>
@@ -735,6 +852,6 @@
         <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="ySA-5e-xdq"/>
+        <segue reference="oAX-zj-Ox9"/>
     </inferredMetricsTieBreakers>
 </document>
